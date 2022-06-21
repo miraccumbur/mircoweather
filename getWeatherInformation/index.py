@@ -244,7 +244,7 @@ def getCurrentWeather():
         latitude=db.collection("cities").document(city).collection("location").document("latitude").get().to_dict()
         longitude=db.collection("cities").document(city).collection("location").document("longitude").get().to_dict()
         # url="http://api.openweathermap.org/data/2.5/onecall?lat="+latitude["value"]+"&lon="+longitude["value"]+"&exclude=daily,minutely,hourly,alerts&appid=4bea130418e11ef03d28e10bb3dbe90c"
-        url="http://api.openweathermap.org/data/2.5/weather?lat="+latitude["value"]+"&lon="+longitude["value"]+"&appid=4bea130418e11ef03d28e10bb3dbe90c"
+        url="http://api.openweathermap.org/data/2.5/weather?lat="+latitude["value"]+"&lon="+longitude["value"]+"&appid="
         data=requests.get(url).json()
         #format(432.456, ".2f")
         #print(data)
@@ -266,7 +266,7 @@ def getDailyWeather():
         latitude=db.collection("cities").document(city).collection("location").document("latitude").get().to_dict()
         longitude=db.collection("cities").document(city).collection("location").document("longitude").get().to_dict()
         #print(latitude["value"],longitude["value"])
-        url="http://api.openweathermap.org/data/2.5/onecall?lat="+latitude["value"]+"&lon="+longitude["value"]+"&exclude=current,minutely,hourly,alerts&appid=4bea130418e11ef03d28e10bb3dbe90c"
+        url="http://api.openweathermap.org/data/2.5/onecall?lat="+latitude["value"]+"&lon="+longitude["value"]+"&exclude=current,minutely,hourly,alerts&appid="
         data=requests.get(url).json()
         i=0
         while i<3:
@@ -307,7 +307,7 @@ def getHourlyWeather():
         latitude=db.collection("cities").document(city).collection("location").document("latitude").get().to_dict()
         longitude=db.collection("cities").document(city).collection("location").document("longitude").get().to_dict()
         #print(latitude["value"],longitude["value"])
-        url="http://api.openweathermap.org/data/2.5/onecall?lat="+latitude["value"]+"&lon="+longitude["value"]+"&exclude=current,minutely,daily,alerts&appid=4bea130418e11ef03d28e10bb3dbe90c"
+        url="http://api.openweathermap.org/data/2.5/onecall?lat="+latitude["value"]+"&lon="+longitude["value"]+"&exclude=current,minutely,daily,alerts&appid="
         data=requests.get(url).json()
         i=0
         while i<48:
