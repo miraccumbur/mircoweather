@@ -17,8 +17,8 @@ sender_pass = ''
 # session.starttls() #enable security
 # session.login(sender_address, sender_pass) #login with mail_id and password
 
-account_sid = 'AC0e90a4e5a31b115fb23481a7429c8b21'
-auth_token ='0a1924bcca3cc229ee57742e78e077e8'
+account_sid = ''
+auth_token =''
 client = Client(account_sid, auth_token)
 
 cities=list()
