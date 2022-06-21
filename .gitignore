@@ -1,0 +1,4 @@
+getWeatherInformation/keys/
+sendSmsAndMail/keys/
+setCityToCitiesCollection/keys/
+websiteWithSaltFlask/backend/keys/
